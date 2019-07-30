@@ -16,6 +16,7 @@
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
-    "jasmine": "^3.4.0"
+    "jasmine": "^3.4.0",
+    "jasmine-es6": "^0.4.3"
   }
 }
