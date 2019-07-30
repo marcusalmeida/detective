@@ -48,7 +48,7 @@ describe('Witness', () => {
         });
 
         it('should return 2 or 3 (randomly) when place or weapon is wrong', () => {
-            spyOn(scene, 'checkDetails').and.returnValue([3]);
+            spyOn(scene, 'checkDetails').and.returnValue([2, 3]);
             const witness = new Witness(scene);
 
             const theory = new Theory(1, 2, 2);
