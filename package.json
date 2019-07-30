@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "eslint": "^6.1.0",
     "eslint-config-standard": "^13.0.1",
     "eslint-plugin-import": "^2.18.2",
@@ -18,5 +19,8 @@
     "eslint-plugin-standard": "^4.0.0",
     "jasmine": "^3.4.0",
     "jasmine-es6": "^0.4.3"
+  },
+  "dependencies": {
+    "console-table-printer": "^1.0.0-beta20"
   }
 }

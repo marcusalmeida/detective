@@ -1,5 +1,5 @@
-import { CrimeScene, Theory } from '../src/CrimeScene';
-import { CrimeSceneMaker } from '../src/CrimeSceneMaker';
+import { CrimeScene, Theory } from '../src/models/CrimeScene';
+import { CrimeSceneMaker } from '../src/models/CrimeSceneMaker';
 
 const database = {
     suspects: ['Joker', 'Thanos',],

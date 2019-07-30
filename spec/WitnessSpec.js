@@ -1,5 +1,5 @@
-import { CrimeScene, Theory } from '../src/CrimeScene';
-import { Witness } from '../src/Witness';
+import { CrimeScene, Theory } from '../src/models/CrimeScene';
+import { Witness } from '../src/models/Witness';
 
 describe('Witness', () => {
     let scene;

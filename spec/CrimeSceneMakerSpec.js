@@ -1,4 +1,4 @@
-import { CrimeSceneMaker } from '../src/CrimeSceneMaker';
+import { CrimeSceneMaker } from '../src/models/CrimeSceneMaker';
 
 const database = {
     suspects: ['Joker', 'Thanos',],
