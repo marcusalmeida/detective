@@ -1,4 +1,11 @@
 import { CrimeScene, Theory } from '../src/CrimeScene';
+import { CrimeSceneMaker } from '../src/CrimeSceneMaker';
+
+const database = {
+    suspects: ['Joker', 'Thanos',],
+    places:   ['Gotham', 'Wakanda'],
+    weapons : ['Hammer', 'Infinity Gunlet']
+};
 
 describe('CrimeScene', () => {
     it("should contains details about crime's scene", () => {
@@ -14,11 +21,7 @@ describe('CrimeScene', () => {
 
         beforeAll(() => {
             scene = new CrimeScene('Joker', 'Gotham', 'Hammer');
-            spyOnProperty(scene, 'database', 'get').and.returnValue({
-                suspects: ['Joker', 'Thanos',],
-                places:   ['Gotham', 'Wakanda'],
-                weapons : ['Hammer', 'Infinity Gunlet']
-            });
+            spyOnProperty(scene, 'database', 'get').and.returnValue(database);
         });
 
         it('should return an empty array when the Theory is correct', () => {
@@ -52,3 +55,4 @@ describe('CrimeScene', () => {
         });
     });
 });
+
