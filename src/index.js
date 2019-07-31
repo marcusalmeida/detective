@@ -40,5 +40,3 @@ const run = () => {
 };
 
 run();
-
-console.log(scene);
