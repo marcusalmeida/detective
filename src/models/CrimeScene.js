@@ -1,5 +1,3 @@
-import Database from "../Database";
-
 /**
  * CrimeScene 
  * 
@@ -24,20 +22,24 @@ export class CrimeScene {
         return this._weapon;
     }
 
-    get database() { return Database; }    
-
-    checkDetails(theory) {
+    /**
+     * Checks informed theory.
+     * 
+     * @param {*} theory 
+     * @param {*} database 
+     */
+    checkDetails(theory, database) {
         let results = [];
-
-        if (this.database.suspects[theory.suspect - 1] !== this.suspect){
+        
+        if (database.suspects[theory.suspect - 1] !== this.suspect){
             results.push(1);
         }
 
-        if (this.database.places[theory.place - 1] !== this.place){
+        if (database.places[theory.place - 1] !== this.place){
             results.push(2);
         }
         
-        if (this.database.weapons[theory.weapon - 1] !== this.weapon){
+        if (database.weapons[theory.weapon - 1] !== this.weapon){
             results.push(3);
         }
 

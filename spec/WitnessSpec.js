@@ -1,8 +1,14 @@
 import { CrimeScene, Theory } from '../src/models/CrimeScene';
 import { Witness } from '../src/models/Witness';
 
+const database = {
+    suspects: ['Joker', 'Thanos',],
+    places:   ['Gotham', 'Wakanda'],
+    weapons : ['Hammer', 'Infinity Gunlet']
+};
+
 describe('Witness', () => {
-    let scene;
+    let scene;  
     beforeAll(() => {
         scene = new CrimeScene('Joker', 'Gotham', 'Hammer');
     });
@@ -13,8 +19,8 @@ describe('Witness', () => {
 
             const theory = new Theory(1, 1, 1);
     
-            expect(witness.verifyTheory(theory)).toBe(0);
-            expect(scene.checkDetails).toHaveBeenCalledWith(theory);
+            expect(witness.verifyTheory(theory, database)).toBe(0);
+            expect(scene.checkDetails).toHaveBeenCalledWith(theory, database);
         });
 
         it('should return 1 when the suspect is wrong', () => {
@@ -23,8 +29,8 @@ describe('Witness', () => {
 
             const theory = new Theory(2, 1, 1);
             
-            expect(witness.verifyTheory(theory)).toBe(1);
-            expect(scene.checkDetails).toHaveBeenCalledWith(theory);
+            expect(witness.verifyTheory(theory, database)).toBe(1);
+            expect(scene.checkDetails).toHaveBeenCalledWith(theory, database);
         });
 
         it('should return 2 when place is wrong', () => {
@@ -33,8 +39,8 @@ describe('Witness', () => {
 
             const theory = new Theory(1, 2, 1);
             
-            expect(witness.verifyTheory(theory)).toBe(2);
-            expect(scene.checkDetails).toHaveBeenCalledWith(theory);
+            expect(witness.verifyTheory(theory, database)).toBe(2);
+            expect(scene.checkDetails).toHaveBeenCalledWith(theory, database);
         });
 
         it('should return 3 when weapon is wrong', () => {
@@ -43,8 +49,8 @@ describe('Witness', () => {
 
             const theory = new Theory(1, 1, 2);
             
-            expect(witness.verifyTheory(theory)).toBe(3);
-            expect(scene.checkDetails).toHaveBeenCalledWith(theory);
+            expect(witness.verifyTheory(theory, database)).toBe(3);
+            expect(scene.checkDetails).toHaveBeenCalledWith(theory, database);
         });
 
         it('should return 2 or 3 (randomly) when place or weapon is wrong', () => {
@@ -53,8 +59,8 @@ describe('Witness', () => {
 
             const theory = new Theory(1, 2, 2);
             
-            expect([2,3]).toContain(witness.verifyTheory(theory));
-            expect(scene.checkDetails).toHaveBeenCalledWith(theory);
+            expect([2,3]).toContain(witness.verifyTheory(theory, database));
+            expect(scene.checkDetails).toHaveBeenCalledWith(theory, database);
         });
     });
 });
