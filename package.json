@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node src/index.js && exit 1",
-    "test": "jasmine --verbose"
+    "start": "babel-node src/index.js && exit 0",
+    "test": "jasmine"
   },
   "keywords": [],
   "author": "",
