@@ -1,5 +1,10 @@
 ## Detective:
 
+### Dependências:
+
+    * Node v10.12.0
+    * Jasmine
+    
 ### Como executar:
     1. Instalando dependências:
         
