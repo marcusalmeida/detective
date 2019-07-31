@@ -5,21 +5,26 @@ export class Table {
         this._db = database;
     }
 
-    show() {
+    showSuspects() {
         const suspects = [];
-        const places = [];
-        const weapons = [];
-        
         this._db.suspects.forEach((element, index) => {
-            suspects.push({index: index+1, Suspeitos: element });
+            suspects.push({Número: index+1, Suspeito: element });
         });
         printTable(suspects);
+    }
+
+    showPlaces() {
+        const places = [];
         this._db.places.forEach((element, index) => {
-            places.push({index: index+1, Lugares: element });
+            places.push({Número: index+1, Lugar: element });
         });
         printTable(places);
+    }
+
+    showWeapons() {
+        const weapons = [];
         this._db.weapons.forEach((element, index) => {
-            weapons.push({index: index+1, Armas: element });
+            weapons.push({Número: index+1, Arma: element });
         });
         printTable(weapons);
     }
