@@ -22,6 +22,7 @@
     "jasmine-es6": "^0.4.3"
   },
   "dependencies": {
+    "braces": "^3.0.2",
     "chalk": "^2.4.2",
     "clear": "^0.1.0",
     "console-table-printer": "^1.0.0-beta20",
