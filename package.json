@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "babel-node src/index.js && exit 1",
+    "test": "jasmine --verbose"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +22,10 @@
     "jasmine-es6": "^0.4.3"
   },
   "dependencies": {
-    "console-table-printer": "^1.0.0-beta20"
+    "chalk": "^2.4.2",
+    "clear": "^0.1.0",
+    "console-table-printer": "^1.0.0-beta20",
+    "figlet": "^1.2.3",
+    "inquirer": "^6.5.0"
   }
 }
