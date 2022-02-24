@@ -17,8 +17,3 @@
     3. Executando o projeto:
 
         $ npm start
-
-
-Obs:
-
-Como na especificação não estava detalhado como o projeto deveria ser implementado com relação a interface com o usuário, foi implementado uma solução "client" no prompt.
